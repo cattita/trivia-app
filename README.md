@@ -1,0 +1,3 @@
+Esta aplicación genera una trivia compuesta por 10 preguntas, basadas en una categoría seleccionada por el usuario. También permite elegir la dificultad y el tipo de preguntas antes de comenzar la ronda. Al contestar, cada respuesta correcta otorga 100 puntos, y al finalizar se muestra el puntaje total junto a un botón para iniciar una nueva trivia.
+Importante: Las preguntas y respuestas están en inglés, ya que se obtienen desde una API pública llamada Open Trivia DB, la cual no ofrece contenido oficial en español.
+Esta aplicación fue desarrollada con HTML, CSS y JavaScript, y cuenta con diseño responsive adaptable a distintos dispositivos.
