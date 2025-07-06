@@ -1,0 +1,162 @@
+:root {
+  --color-bg: #1e1e2f;           
+  --color-container-bg: #2e2e42; 
+  --color-text: #e0e0f0;         
+  --color-primary: #ff6f91;      
+  --color-primary-hover: #ff94a9;
+  --color-button-text: #fff;
+  --color-border: #444466;
+  --shadow: 0 0 12px rgba(255, 111, 145, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  background-color: var(--color-container-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  margin: auto;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  text-shadow: 0 0 8px var(--color-primary);
+}
+
+.config {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.config select,
+.config button {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 1.5px solid var(--color-border);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.config select:hover,
+.config button:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary);
+  color: var(--color-button-text);
+}
+
+button {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.quiz-question {
+  margin-bottom: 2rem;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.answers button {
+  padding: 12px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 1.5px solid var(--color-border);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.answers button:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-button-text);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Botón "Crear nueva trivia" estilizado */
+#restartBtn {
+  padding: 18px 24px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 12px;
+  background-color: var(--color-primary);
+  color: var(--color-button-text);
+  border: none;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  margin-top: 1.5rem;
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#restartBtn:hover {
+  background-color: var(--color-primary-hover);
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 1.25rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .config select,
+  .config button,
+  .answers button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
+/* Mejora en pantallas grandes */
+@media (min-width: 900px) {
+  .container {
+    padding: 3rem;
+  }
+}

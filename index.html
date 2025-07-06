@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trivia App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="trivia-img.png" />
+</head>
+<body>
+  <main class="container">
+    <h1 class="title">Trivia App</h1>
+
+    <form id="configForm" class="config">
+      <div class="form-group">
+        <label for="category">Categoría</label>
+        <select id="category" name="category"></select>
+      </div>
+
+      <div class="form-group">
+        <label for="difficulty">Dificultad</label>
+        <select id="difficulty" name="difficulty">
+          <option value="easy">Fácil</option>
+          <option value="medium">Media</option>
+          <option value="hard">Difícil</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="type">Tipo de respuesta</label>
+        <select id="type" name="type">
+          <option value="multiple">Opción múltiple</option>
+          <option value="boolean">Verdadero o Falso</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn">Comenzar</button>
+    </form>
+
+    <section id="quizContainer" class="hidden"></section>
+
+    <section id="resultContainer" class="hidden">
+      <h2>Resultado final:</h2>
+      <p id="scoreText"></p>
+      <button id="restartBtn" class="btn">Crear nueva trivia</button>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
